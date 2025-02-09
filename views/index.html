@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/chat">Home</a>
+        <a href="/contactus">Contact Us</a>
+    </nav>
+    <h2>Chat</h2>
+    <input type="text" id="message" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <script>
+        const username = localStorage.getItem("username");
+        if (!username) window.location.href = "/";
+
+        async function sendMessage() {
+            const message = document.getElementById("message").value.trim();
+            if (!message) return;
+
+            await fetch("/message", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ username, message })
+            });
+
+            document.getElementById("message").value = "";
+        }
+    </script>
+</body>
+</html>
