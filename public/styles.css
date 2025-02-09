@@ -1,7 +1,7 @@
-/* General Page Styling */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -10,105 +10,158 @@ body {
 /* Navbar */
 nav {
     background-color: #333;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-nav a, nav button {
+nav a {
     color: white;
     text-decoration: none;
-    background: transparent;
-    border: none;
     padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-nav a:hover, nav button:hover {
+nav a:hover {
     background-color: #555;
-    border-radius: 5px;
 }
 
-/* Chat Section */
-h2 {
-    color: #333;
+/* Login Page */
+.login-container {
+    background: white;
+    width: 30%;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-#message {
-    width: 60%;
+.login-container input {
+    width: 90%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-button {
-    background-color: #28a745;
+.login-container button {
+    background-color: #007bff;
     color: white;
-    border: none;
     padding: 10px 15px;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
 }
-
-button:hover {
-    background-color: #218838;
-}
-
-/* Messages Container */
-#messages {
-    width: 60%;
-    margin: auto;
-    text-align: left;
-    padding: 10px;
-    background: white;
-    border-radius: 5px;
-    min-height: 150px;
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-}
-
-/* Contact Us Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
+/* Chat Page */
+.chat-container {
+    width: 40%;
+    margin: 50px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
-    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.modal input {
-    width: 90%;
-    padding: 8px;
-    margin: 5px 0;
+.chat-container input {
+    width: 75%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.close-btn {
-    background: red;
-    padding: 5px 10px;
-    border: none;
+.chat-container button {
+    background-color: #007bff;
     color: white;
+    padding: 10px 15px;
+    border: none;
     cursor: pointer;
-    margin-top: 10px;
+    border-radius: 5px;
 }
 
-.close-btn:hover {
-    background: darkred;
+.chat-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Form */
+.contact-container {
+    background: white;
+    padding: 20px;
+    width: 40%;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-container button:hover {
+    background-color: #218838;
+}
+
+/* Success Page */
+.success-container {
+    width: 40%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-container a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.success-container a:hover {
+    background-color: #0056b3;
+}
+
+/* Error Page */
+.error-page {
+    margin-top: 50px;
+}
+
+.error-page h1 {
+    font-size: 50px;
+    color: #e74c3c;
+}
+
+.error-page p {
+    font-size: 18px;
+}
+
+.error-page a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.error-page a:hover {
+    background-color: #0056b3;
 }
