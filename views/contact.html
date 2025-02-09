@@ -12,11 +12,34 @@
     
     <div class="contact-container">
         <h2>Contact Us</h2>
-        <form action="/success" method="get">
-            <input type="text" name="name" placeholder="Enter Name" required>
-            <input type="email" name="email" placeholder="Enter Email" required>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        const username = localStorage.getItem("username");
+
+        async function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+
+            if (!name || !email) return;
+
+            await fetch("/contactus", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email })
+            });
+
+            window.location.href = "/success";
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", submitForm);
+    </script>
 </body>
 </html>
