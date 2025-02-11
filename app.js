@@ -20,5 +20,4 @@ app.get("/success", (req, res) => res.sendFile(__dirname + "/views/success.html"
 app.use((req, res) => {
     res.status(404).sendFile(__dirname + "/views/404.html");
 });
-
 app.listen(PORT);
